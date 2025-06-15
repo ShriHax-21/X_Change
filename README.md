@@ -85,13 +85,6 @@ ipcng
 
 ---
 
-## 📜 License
-
-MIT License  
-Use it. Fork it. Modify it. Just don’t use it for evil. 😈
-
----
-
 ## 🤘 Author
 
 Made with ❤️ by [ShriHax](https://github.com/ShriHax-21)
