@@ -1,43 +1,36 @@
----
-
-### ✅ `README.md` for `X_Change`
-
-```markdown
 # 🔁 X_Change
 
-**X_Change** is an advanced and colorful Bash tool to randomly change your **IP** and **MAC address** in Kali Linux – useful for pentesters, CTF players, or anyone who wants to spoof and shuffle their network identity easily.
+**X_Change** is a colorful and advanced Bash tool to randomly change your **IP** and **MAC address** on Kali Linux. It’s perfect for pentesters, CTF players, or anyone seeking to spoof or shuffle their network identity quickly and safely.
 
 ---
 
 ## ⚡ Features
 
-- 🔐 **Auto sudo**: Elevates automatically if not run as root
+- 🔐 **Auto sudo**: Automatically elevates privileges if not run as root
 - ⚙️ **Interface auto-detection**: Skips `lo`, `docker`, and virtual NICs
-- 🔁 **Random IP address** (192.168.1.x) assignment
-- 🎭 **Random or custom MAC address**
-- 🧹 **Remove secondary IPs** (to clean dynamic leftovers)
-- 🌈 **Color-coded UI** for clean terminal display
-- ⚡ Super lightweight – pure Bash + macchanger
+- 🔁 **Random IP address** assignment (in the 192.168.1.x range)
+- 🎭 **Random or custom MAC address** support
+- 🧹 **Removes secondary IPs** for a clean setup
+- 🌈 **Color-coded UI** for better terminal clarity
+- ⚡ Super lightweight — pure Bash + macchanger
 
 ---
 
 ## 🧪 Preview
 
 ```
-
-\===============================
+===============================
 Kali Linux IP & MAC Changer
 ===========================
 
-\[+] Using interface: eth0
+[+] Using interface: eth0
 
 1. Change MAC address only
 2. Change IP address only (random)
 3. Change both MAC and IP
 4. Remove secondary IPs
 5. Exit
-
-````
+```
 
 ---
 
@@ -45,11 +38,11 @@ Kali Linux IP & MAC Changer
 
 ### 📦 Requirements
 
-Install required packages (if not already installed):
+Install the required packages if you haven’t already:
 ```bash
 sudo apt update
 sudo apt install macchanger net-tools -y
-````
+```
 
 ### 📂 Make Executable
 
@@ -64,44 +57,37 @@ chmod +x X_Change.sh
 ### 🏃‍♂️ Run Directly
 
 ```bash
-./X_Change.sh
+sudo ./X_Change.sh
 ```
 
-If you want to avoid typing `sudo` or long paths every time:
+Or, set up a convenient alias (optional):
 
-### 🔗 Set Alias (Optional)
-
-Add this to your `~/.bashrc` or `~/.zshrc`:
-
+Add this line to your `~/.bashrc` or `~/.zshrc`:
 ```bash
-alias ipcng='/full/path/to/X_Change.sh'
+alias xcng='/full/path/to/X_Change.sh'
 ```
-
 Reload your shell:
-
 ```bash
 source ~/.bashrc
 ```
-
-Now just run:
-
+Now you can just run:
 ```bash
 ipcng
 ```
 
 ---
 
-## 🎨 Color Key (Terminal)
+## 🎨 Color Key
 
-* 🔵 **Old IP / MAC** – Blue
-* 🔴 **New IP / MAC** – Red
-* 🟢 **Menu** – Cyan & Neon Green
+- 🔵 **Old IP / MAC** — Blue
+- 🔴 **New IP / MAC** — Red
+- 🟢 **Menu** — Cyan & Neon Green
 
 ---
 
 ## 📜 License
 
-MIT License
+MIT License  
 Use it. Fork it. Modify it. Just don’t use it for evil. 😈
 
 ---
@@ -112,7 +98,5 @@ Made with ❤️ by [ShriHax](https://github.com/ShriHax-21)
 
 ---
 
-> Stay stealthy. Stay sharp.
-> — *X\_Change: Your network identity shapeshifter.*
-
-```
+> Stay stealthy. Stay sharp.  
+> — *X_Change: Your network identity shapeshifter.*
