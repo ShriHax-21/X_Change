@@ -1,4 +1,4 @@
-# 🔁 X_Change
+# X_Change
 
 **X_Change** is a colorful and advanced Bash tool to randomly change your **IP** and **MAC address** on Kali Linux. It’s perfect for pentesters, CTF players, or anyone seeking to spoof or shuffle their network identity quickly and safely.
 
@@ -8,29 +8,10 @@
 
 - 🔐 **Auto sudo**: Automatically elevates privileges if not run as root
 - ⚙️ **Interface auto-detection**: Skips `lo`, `docker`, and virtual NICs
-- 🔁 **Random IP address** assignment (in the 192.168.1.x range)
+- 🔁 **Random or custom IP address** assignment (in the 192.168.1.x range)
 - 🎭 **Random or custom MAC address** support
 - 🧹 **Removes secondary IPs** for a clean setup
-- 🌈 **Color-coded UI** for better terminal clarity
-- ⚡ Super lightweight — pure Bash + macchanger
-
----
-
-## 🧪 Preview
-
-```
-===============================
-Kali Linux IP & MAC Changer
-===========================
-
-[+] Using interface: eth0
-
-1. Change MAC address only
-2. Change IP address only (random)
-3. Change both MAC and IP
-4. Remove secondary IPs
-5. Exit
-```
+- ⚡ **Super lightweight** — pure Bash + macchanger
 
 ---
 
@@ -43,10 +24,17 @@ Install the required packages if you haven’t already:
 sudo apt update
 sudo apt install macchanger net-tools -y
 ```
+---
+# 👉 get the file 
+```bash
+git clone https://github.com/ShriHax-21/X_Change.git
+```
 
 ### 📂 Make Executable
 
 ```bash
+cd X_Change
+
 chmod +x X_Change.sh
 ```
 
@@ -59,11 +47,13 @@ chmod +x X_Change.sh
 ```bash
 sudo ./X_Change.sh
 ```
-
-Or, set up a convenient alias (optional):
+## OPTIONAL
+Or, set up a convenient alias:
 
 Add this line to your `~/.bashrc` or `~/.zshrc`:
 ```bash
+vi ~/.bashrc or ~/.zshrc
+
 alias xcng='/full/path/to/X_Change.sh'
 ```
 Reload your shell:
@@ -72,7 +62,7 @@ source ~/.bashrc
 ```
 Now you can just run:
 ```bash
-ipcng
+xcng
 ```
 
 ---
@@ -81,7 +71,7 @@ ipcng
 
 - 🔵 **Old IP / MAC** — Blue
 - 🔴 **New IP / MAC** — Red
-- 🟢 **Menu** — Cyan & Neon Green
+- 🟣 **Menu** — Purple
 
 ---
 
@@ -90,6 +80,3 @@ ipcng
 Made with ❤️ by [ShriHax](https://github.com/ShriHax-21)
 
 ---
-
-> Stay stealthy. Stay sharp.  
-> — *X_Change: Your network identity shapeshifter.*
