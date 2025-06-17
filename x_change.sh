@@ -53,8 +53,9 @@ change_ip() {
         read base_ip
         last_octet=$((RANDOM % 254 + 1))
         ip_addr="$base_ip.$last_octet"
-        echo -e -n "${BLUE}Enter Gateway for this range (e.g. ${base_ip}.1): ${NC}"
-        read gateway
+        read -e -p "$(echo -e ${BLUE}Enter Gateway for this range \(${base_ip}.1\): ${NC})" gateway
+        gateway=${gateway:-$base_ip.1}
+
         netmask="255.255.255.0"
 
     elif [ "$ip_choice" == "2" ]; then
@@ -62,8 +63,9 @@ change_ip() {
         read ip_addr
         echo -e -n "${BLUE}Enter Netmask (e.g. 255.255.255.0): ${NC}"
         read netmask
-        echo -e -n "${BLUE}Enter Gateway (e.g. 192.168.159.1): ${NC}"
-        read gateway
+        read -e -p "$(echo -e ${BLUE}Enter Gateway for this range \(${base_ip}.1\): ${NC})" gateway
+        gateway=${gateway:-$base_ip.1}
+
     else
         echo -e "${RED}[!] Invalid choice. Cancelling IP change.${NC}"
         return
@@ -75,6 +77,7 @@ change_ip() {
 
     echo -e "[+] Old IP: ${BLUE}${old_ip}${NC}"
     echo -e "[+] New IP: ${RED}${ip_addr}${NC}"
+    echo -e "[+] Gateway: ${PURPLE}${gateway}${NC}"
     echo -e "${GREEN}[+] IP address changed successfully.${NC}"
 }
 

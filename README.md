@@ -14,12 +14,42 @@
 - ⚡ **Super lightweight** — pure Bash + macchanger
 
 ---
+## Main Menu
+```bash
+===============================
+ Kali Linux IP & MAC Changer                                                                
+===============================                                                             
+[+] Using interface: eth0
 
+1. Change MAC address only 
+2. Change IP address only 
+3. Change both MAC and IP 
+4. Remove secondary IPs 
+5. Exit 
+===============================
+Choose an option [1-5]:
+```
+After that in IP changer
+```bash
+[*] Changing IP address...
+Choose IP configuration:
+1. Random IP (you choose the range, e.g. 192.168.100)
+2. Enter IP manually
+Enter your choice [1-2]:
+```
+In Random
+```bash
+Enter IP range (e.g. 192.168.159):
+Enter Gateway for this range (e.g. 192.168.159.1): 
+```
+In IP range make sure to enter 3 octal which ranges you want it to be
+in gateway you can either use default or manual
 ## 🚀 Setup
 
 ### 📦 Requirements
 
 Install the required packages if you haven’t already:
+
 ```bash
 sudo apt update
 sudo apt install macchanger net-tools -y
