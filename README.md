@@ -22,7 +22,7 @@
 
 ```bash
 ===============================
- Kali Linux IP & MAC Changer
+            x_change
 ===============================
 [+] Using interface: eth0
 
@@ -84,7 +84,7 @@ git clone https://github.com/ShriHax-21/X_Change.git
 ```bash
 cd X_Change
 
-chmod +x kali-ip-mac-changer.sh
+chmod +x X_Change.sh
 ```
 
 ---
@@ -94,7 +94,7 @@ chmod +x kali-ip-mac-changer.sh
 ### 🏃‍♂️ Run Directly
 
 ```bash
-sudo ./kali-ip-mac-changer.sh
+sudo ./X_Change.sh
 ```
 
 ## OPTIONAL
@@ -103,7 +103,7 @@ Set up a convenient alias:
 
 Add this line to your `~/.bashrc` or `~/.zshrc`:
 ```bash
-alias xcng='/full/path/to/kali-ip-mac-changer.sh'
+alias xcng='/full/path/to/X_Change.sh'
 ```
 Reload your shell:
 ```bash
